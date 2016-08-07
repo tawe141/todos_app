@@ -11,10 +11,51 @@
     <div id="example"></div>
     <script type="text/babel">
     // React code can go here...but don't do this in production!
+
+    var Form = React.createClass({
+        getInitialState: function() {
+            return {
+                text: ''
+            }
+        },
+
+        handleChange: function(e) {
+            this.setState({
+                text: e.target.value
+            })
+        },
+
+        render: function() {
+            return (
+                <form>
+                    <input onChange={this.handleChange} placeholder="type tasks here" />
+                    <p>
+                    {this.state.text}
+                    </p>
+                    <button type="submit">Submit</button>
+                </form>
+            )
+        }
+    })
+
+    var App = React.createClass({
+
+
+        render: function() {
+            return (
+                <div>
+                    <h1>Todos App</h1>
+                    <Form />
+                </div>
+            )
+        }
+    })
+
       ReactDOM.render(
-        <h1>Hello, world! 
-        This is the first change done today on the 6th of Aug</h1>,
-        document.getElementById('example')
+        // <h1>Hello, world!
+        // This is the first change done today on the 6th of Aug</h1>,
+        <App text="Ruth"/>
+        , document.getElementById('example')
       );
     </script>
   </body>
