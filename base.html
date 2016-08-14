@@ -2,61 +2,42 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello Eric Taw, This is a change made -Ruth</title>
+    <title>To Do List</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
   </head>
   <body>
-    <div id="example"></div>
-    <script type="text/babel">
-    // React code can go here...but don't do this in production!
+      <h1>To Do List</h1>
+      <style>
+          div {padding-top:20px;}
 
-    var Form = React.createClass({
-        getInitialState: function() {
-            return {
-                text: ''
-            }
-        },
+          input[type=text]:focus {
+              width: 100%;
+              padding: 30px 50px;
+              margin: 8px 0;
+           }  
+          div {padding-bottom:20px;}
 
-        handleChange: function(e) {
-            this.setState({
-                text: e.target.value
-            })
-        },
-
-        render: function() {
-            return (
-                <form>
-                    <input onChange={this.handleChange} placeholder="type tasks here" />
-                    <p>
-                    {this.state.text}
-                    </p>
-                    <button type="submit">Submit</button>
-                </form>
-            )
-        }
-    })
-
-    var App = React.createClass({
-
-
-        render: function() {
-            return (
-                <div>
-                    <h1>Todos App</h1>
-                    <Form />
-                </div>
-            )
-        }
-    })
-
-      ReactDOM.render(
-        // <h1>Hello, world!
-        // This is the first change done today on the 6th of Aug</h1>,
-        <App text="Ruth"/>
-        , document.getElementById('example')
-      );
-    </script>
+        </style>
+          <form>
+            <label for="fname">Input</label>
+            <input type="text" id="fname" name="fname">
+          </form>
+        <style>
+            .button {
+                background-color: dodgerblue;
+                border-style: none;
+                outline: 0;
+                color: white;
+                text-transform: uppercase;
+                padding: 10px 30px;
+                border-radius: 10px;
+                cursor: pointer;
+            }           
+      </style>
+     
+      <input type="button" class="button" value="Add to List" />
   </body>
 </html>
+
