@@ -1,43 +1,70 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
+<head>
     <title>To Do List</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-  </head>
-  <body>
-      <h1>To Do List</h1>
-      <style>
-          div {padding-top:20px;}
+    <style>
+        .center {
+            text-align: center;
+            padding: 0 30px;
+            border: 10px solid lightskyblue;
+            border-radius: 40px;
+        }
 
-          input[type=text]:focus {
-              width: 100%;
-              padding: 30px 50px;
-              margin: 8px 0;
-           }  
-          div {padding-bottom:20px;}
+        p.sansserif {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 55px;
+        }
 
-        </style>
-          <form>
-            <label for="fname">Input</label>
-            <input type="text" id="fname" name="fname">
-          </form>
-        <style>
-            .button {
-                background-color: dodgerblue;
-                border-style: none;
-                outline: 0;
-                color: white;
-                text-transform: uppercase;
-                padding: 10px 30px;
-                border-radius: 10px;
-                cursor: pointer;
-            }           
-      </style>
-     
-      <input type="button" class="button" value="Add to List" />
-  </body>
+        .center1 {
+            text-align: center;
+            font-family: Arial, Lato, sans-serif;
+            font-size: 22px;
+        }
+
+        .resized {
+            width: 600px;
+            height: 50px;
+            font-size 40px;
+        }
+
+        .button {
+            background: url(button.png) no-repeat top;
+            background-color: dodgerblue;
+            border-style: none;
+            outline: 0;
+            color: white;
+            text-transform: 0;
+            padding: 10px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button:active {
+            background: url(button.png) no-repeat bottom;
+            color: white;
+            background-color: skyblue;
+        }
+        input {
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="center">
+        <p class="sansserif"> todo  </p>
+    </div>
+    <style>
+        div {
+            padding-top: 50px;
+        }
+    </style>
+    <div class="center1">
+        <p>
+            <input type="text" placeholder="what do you need to do?" class=resized>
+        </p>
+
+        <input type="button" class="button" value="Add" />
+    </div>
+</body>
 </html>
 
